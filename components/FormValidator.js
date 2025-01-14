@@ -49,16 +49,13 @@ class FormValidator {
   }
 
   resetValidation() {
-    this._inputList = Array.from(
-      this._formEl.querySelectorAll(this._inputSelector)
-    );
     this._inputList.forEach((inputElement) => {
       this._hideInputError(inputElement);
     });
 
-    this._toggleButtonState();
-
     this._formEl.reset();
+
+    this._toggleButtonState();
   }
 
   _setEventListeners() {
